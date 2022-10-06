@@ -14,7 +14,7 @@ const latitude = document.querySelector('#latitude');
 
 check.onclick = () => {
     let key = `f387f708e9c3f1fa93731133a08dcde0`;
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city.value},${country.value}&APPID=${key}`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value},${country.value}&APPID=${key}`;
 
     fetch(url).then(response => {
         return response.json();
@@ -28,7 +28,7 @@ check.onclick = () => {
 
             //! Open Weather Map Url for Icons if you want to, Use 
 
-            let iconsForTemp = `http://openweathermap.org/img/vpn/${items.icon}.png`;
+            let iconsForTemp = `https://openweathermap.org/img/vpn/${items.icon}.png`;
             tempIcon.src = iconsForTemp;
         });
         
